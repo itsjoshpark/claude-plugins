@@ -7,6 +7,105 @@
   },
   "plugins": [
     {
+      "name": "clangd-lsp",
+      "description": "C/C++ language server (clangd) for code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/clangd-lsp",
+      "category": "development"
+    },
+    {
+      "name": "csharp-lsp",
+      "description": "C# language server for code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/csharp-lsp",
+      "category": "development"
+    },
+    {
+      "name": "gopls-lsp",
+      "description": "Go language server for code intelligence and refactoring",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/gopls-lsp",
+      "category": "development"
+    },
+    {
+      "name": "jdtls-lsp",
+      "description": "Java language server (Eclipse JDT.LS) for code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/jdtls-lsp",
+      "category": "development"
+    },
+    {
+      "name": "kotlin-lsp",
+      "description": "Kotlin language server for code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/kotlin-lsp",
+      "category": "development"
+    },
+    {
+      "name": "lua-lsp",
+      "description": "Lua language server for code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/lua-lsp",
+      "category": "development"
+    },
+    {
+      "name": "php-lsp",
+      "description": "PHP language server (Intelephense) for code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/php-lsp",
+      "category": "development"
+    },
+    {
+      "name": "pyright-lsp",
+      "description": "Python language server (Pyright) for type checking and code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/pyright-lsp",
+      "category": "development"
+    },
+    {
+      "name": "ruby-lsp",
+      "description": "Ruby language server for code intelligence and analysis",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/ruby-lsp",
+      "category": "development"
+    },
+    {
+      "name": "rust-analyzer-lsp",
+      "description": "Rust language server for code intelligence and analysis",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/rust-analyzer-lsp",
+      "category": "development"
+    },
+    {
+      "name": "swift-lsp",
+      "description": "Swift language server (SourceKit-LSP) for code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/swift-lsp",
+      "category": "development"
+    },
+    {
       "name": "typescript-lsp",
       "description": "TypeScript/JavaScript language server for code intelligence",
       "author": {
