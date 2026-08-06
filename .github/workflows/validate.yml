@@ -1,0 +1,33 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    name: Validate manifests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      # `claude plugin validate` reads local manifests only — no auth required.
+      # --strict promotes warnings (missing version, unrecognized fields) to errors.
+      - name: Validate marketplace manifest
+        run: claude plugin validate . --strict
+
+      - name: Validate plugin manifests
+        run: |
+          for dir in plugins/*/; do
+            echo "::group::${dir}"
+            claude plugin validate "${dir}" --strict
+            echo "::endgroup::"
+          done
