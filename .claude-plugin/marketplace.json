@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "itsjoshpark",
+  "description": "Josh's Claude Code plugins",
+  "owner": {
+    "name": "Joshua Park"
+  },
+  "plugins": [
+    {
+      "name": "typescript-lsp",
+      "description": "TypeScript/JavaScript language server for code intelligence",
+      "author": {
+        "name": "Joshua Park"
+      },
+      "source": "./plugins/typescript-lsp",
+      "category": "development"
+    }
+  ]
+}
