@@ -1,0 +1,19 @@
+{
+  "name": "php-lsp",
+  "description": "PHP language server (Intelephense) for code intelligence",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joshua Park"
+  },
+  "lspServers": {
+    "intelephense": {
+      "command": "intelephense",
+      "args": [
+        "--stdio"
+      ],
+      "extensionToLanguage": {
+        ".php": "php"
+      }
+    }
+  }
+}

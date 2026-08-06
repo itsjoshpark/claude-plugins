@@ -1,0 +1,16 @@
+{
+  "name": "csharp-lsp",
+  "description": "C# language server for code intelligence",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joshua Park"
+  },
+  "lspServers": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "extensionToLanguage": {
+        ".cs": "csharp"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "lua-lsp",
+  "description": "Lua language server for code intelligence",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joshua Park"
+  },
+  "lspServers": {
+    "lua": {
+      "command": "lua-language-server",
+      "extensionToLanguage": {
+        ".lua": "lua"
+      }
+    }
+  }
+}
