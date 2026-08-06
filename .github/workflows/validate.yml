@@ -12,12 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Must precede setup-node so the pnpm binary is on PATH first.
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11
+
+      # No `cache: pnpm` — this repo has no lockfile, and setup-node's cache
+      # fails outright when it can't find one.
       - uses: actions/setup-node@v7
         with:
           node-version: 'lts/*'
 
       - name: Install Claude Code CLI
-        run: npm install -g @anthropic-ai/claude-code
+        run: pnpm add -g @anthropic-ai/claude-code
 
       # `claude plugin validate` reads local manifests only — no auth required.
       # --strict promotes warnings (missing version, unrecognized fields) to errors.
