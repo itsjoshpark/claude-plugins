@@ -23,8 +23,11 @@ jobs:
         with:
           node-version: 'lts/*'
 
+      # pnpm 10+ refuses to run dependencies' postinstall scripts by default,
+      # so without --allow-build the CLI's platform-native binary is never
+      # downloaded and every `claude` invocation fails.
       - name: Install Claude Code CLI
-        run: pnpm add -g @anthropic-ai/claude-code
+        run: pnpm add -g @anthropic-ai/claude-code --allow-build=@anthropic-ai/claude-code
 
       # `claude plugin validate` reads local manifests only — no auth required.
       # --strict promotes warnings (missing version, unrecognized fields) to errors.
